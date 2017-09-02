@@ -1,1 +1,17 @@
-Edit this file to record your use of outside resources in doing this assignment.
+Name: Chelle Plaisted
+Assignment: Homework 1 (Canvas Map Activity)
+Due Date: 9/4/2017
+
+Log 1: 9/2/2017
+-Used stackOverflow contributor Daniel Nyuamasyo's method for drawing a triangle in lines 45-49 of SpecialToken.java.
+	The code tells the Path object what points to connect to create finished and filled contour.
+	The original code may be found at https://stackoverflow.com/questions/3501126/how-to-draw-a-filled-triangle-in-android-canvas.
+
+Log 2: 9/2/2017
+-Used stackOverflow contributor Lumis' code for rotating a path in lines 56-60 of SpecialToken.java.
+	The code rotates the Path object around its center (after computing the bounds) by a specified degree.
+	It updates the Path's contour lines so that canvas.drawPath(path, paint) can draw the shape correctly.
+	The original code may be found at https://stackoverflow.com/questions/6763231/draw-rotated-path-at-particular-point.
+
+
+Note: The Android Java documentation for the Path, Point, Matrix, and RectF classes were also used throughout the project.

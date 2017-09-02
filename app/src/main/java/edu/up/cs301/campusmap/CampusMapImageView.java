@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.widget.ImageView;
+import java.util.ArrayList;
 
 /**
  * <!-- class CampusMapImageView -->
@@ -17,8 +18,10 @@ import android.widget.ImageView;
 public class CampusMapImageView extends ImageView {
 
     // instance variables for the current and previous tokens
-    private SimpleMapToken token;
+    /*private SimpleMapToken token;
     private SimpleMapToken prevToken;
+    */
+    private ArrayList<SimpleMapToken> tokens;
 
     /**
      * sets a new token
@@ -27,8 +30,11 @@ public class CampusMapImageView extends ImageView {
     public void setToken(SimpleMapToken tok) {
         // set the current and previous tokens, based on the new
         // token that has been given to us
+        tokens.add(tok);
+        /*
         prevToken = token;
         token = tok;
+        */
     }
 
     /**
@@ -58,14 +64,15 @@ public class CampusMapImageView extends ImageView {
      * performs initialization common to both constructors
      */
     private void init() {
-        token = null;
-        prevToken = null;
+        //token = null;
+        //prevToken = null;
+        tokens = new ArrayList<SimpleMapToken>();
     }
 
     @Override
     protected void onDraw(Canvas g) {
         super.onDraw(g);
-        // if the previous token exists, draw it
+       /* // if the previous token exists, draw it
         if (prevToken != null) {
             prevToken.drawOn(g);
         }
@@ -73,6 +80,10 @@ public class CampusMapImageView extends ImageView {
         if (token != null) {
             token.drawOn(g);
         }
+        */
+       for(SimpleMapToken t : tokens) {
+           t.drawOn(g);
+       }
     }
 }
 
