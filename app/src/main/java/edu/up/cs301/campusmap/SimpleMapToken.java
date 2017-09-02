@@ -12,8 +12,8 @@ import android.graphics.Paint;
  *
  * @author Andrew M. Nuxoll
  * @author Steven R. Vegdahl
- * @author <your name here>
- * @version August 2017
+ * @author Chelle Plaisted
+ * @version September 2017
  */
 public class SimpleMapToken {
 

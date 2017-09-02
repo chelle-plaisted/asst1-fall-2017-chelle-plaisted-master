@@ -7,8 +7,8 @@ package edu.up.cs301.campusmap;
  *
  * @author Andrew M. Nuxoll
  * @author Steven R. Vegdahl
- * @author <your name here>
- * @version August 2017
+ * @author Chelle Plaisted
+ * @version September 2017
  */
 
 public class TokenFactory {
@@ -32,7 +32,7 @@ public class TokenFactory {
             case 1:
                 return new SquareToken(x,y);
             case 2:
-                return new SimpleMapToken(x,y);
+                return new SpecialToken(x,y);
             default:
                 return new SimpleMapToken(x,y);
         }

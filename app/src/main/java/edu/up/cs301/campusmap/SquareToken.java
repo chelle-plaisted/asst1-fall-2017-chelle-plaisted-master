@@ -9,7 +9,7 @@ import android.graphics.Paint;
  *
  * This class represents a single map token that can be drawn on a canvas
  *
- * @author
+ * @author Chelle Plaisted
  * @version September 2017
  */
 public class SquareToken extends SimpleMapToken {
@@ -28,6 +28,7 @@ public class SquareToken extends SimpleMapToken {
      * this token can paint itself on a given canvas
      * @param canvas the canvas on which to draw
      */
+    @Override
     public void drawOn(Canvas canvas) {
         // paint the dot on the canvas
         canvas.drawRect(x,y, x+ radius * 2, y + radius * 2, paint);
