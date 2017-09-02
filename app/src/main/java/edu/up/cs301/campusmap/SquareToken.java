@@ -16,7 +16,7 @@ public class SquareToken extends SimpleMapToken {
 
 
     /**
-     * Constructor
+     * Constructor : calls super to instantiate
      * @param xCoord the x-coordinate
      * @param yCoord the y-coordinate
      */
@@ -26,6 +26,7 @@ public class SquareToken extends SimpleMapToken {
 
     /**
      * this token can paint itself on a given canvas
+     * Overrides the super to draw square instead of circle
      * @param canvas the canvas on which to draw
      */
     @Override

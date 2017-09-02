@@ -28,7 +28,7 @@ public class SpecialToken extends SimpleMapToken {
     }//constructor
 
     /**
-     * this token can paint itself on a given canvas
+     * this token can paint itself on a given canvas (an hourglass-esque shape)
      * @param canvas the canvas on which to draw
      */
     @Override
@@ -63,4 +63,4 @@ public class SpecialToken extends SimpleMapToken {
         canvas.drawPath(path, paint);
     }//drawOn
 
-}
+}//Special Token

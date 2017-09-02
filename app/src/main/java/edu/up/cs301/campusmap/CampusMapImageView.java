@@ -12,29 +12,22 @@ import java.util.ArrayList;
  * This class displays the campus map.
  *
  * @author Steven R. Vegdahl
- * @author <your name here>
- * @version August 2017
+ * @author Chelle Plaisted
+ * @version September 2017
  */
 public class CampusMapImageView extends ImageView {
 
-    // instance variables for the current and previous tokens
-    /*private SimpleMapToken token;
-    private SimpleMapToken prevToken;
-    */
+    // instance variable to keep track of tokens
     private ArrayList<SimpleMapToken> tokens;
 
     /**
-     * sets a new token
+     * adds to new token to the list
      * @param tok the new token
      */
     public void setToken(SimpleMapToken tok) {
         // set the current and previous tokens, based on the new
         // token that has been given to us
         tokens.add(tok);
-        /*
-        prevToken = token;
-        token = tok;
-        */
     }
 
     /**
@@ -64,26 +57,19 @@ public class CampusMapImageView extends ImageView {
      * performs initialization common to both constructors
      */
     private void init() {
-        //token = null;
-        //prevToken = null;
         tokens = new ArrayList<SimpleMapToken>();
     }
 
+    /**
+     * draws the maps and tokens
+     * @param g Canvas
+     */
     @Override
     protected void onDraw(Canvas g) {
         super.onDraw(g);
-       /* // if the previous token exists, draw it
-        if (prevToken != null) {
-            prevToken.drawOn(g);
-        }
-        // if the current token exists, draw it
-        if (token != null) {
-            token.drawOn(g);
-        }
-        */
-       for(SimpleMapToken t : tokens) {
+        for(SimpleMapToken t : tokens) {
            t.drawOn(g);
-       }
+        }
     }
 }
 

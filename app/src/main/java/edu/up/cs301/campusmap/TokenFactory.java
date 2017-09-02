@@ -24,7 +24,7 @@ public class TokenFactory {
      */
     public static SimpleMapToken createMapToken(float x, float y, int type)
     {
-        //For now, only one type of map token exists
+        //Draws various tokens (varying by user selection)
         switch(type)
         {
             case 0:
